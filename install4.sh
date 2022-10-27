@@ -43,5 +43,8 @@ sudo pacman -S rxvt-unicode ranger rofi dmenu --needed
 # Install software
 sudo pacman -S firefox vlc --needed
 
+# Download next script
+curl https://raw.githubusercontent.com/markusplayzz/archinstall/main/install5.sh -o ~/install5.sh
+
 # reboot
 sudo reboot
