@@ -1,4 +1,4 @@
-# Arch + i3-gaps Install Guide
+# Arch + i3-gaps Install Guide with Nvidia Graphics
 #### Original: https://gist.github.com/fjpalacios/441f2f6d27f25ee238b9bfcb068865db
 First set up your keyboard layout. For example, in Spanish:
 ```
