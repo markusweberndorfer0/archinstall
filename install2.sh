@@ -1,7 +1,7 @@
 # Only UEFI
 
 # Set language
-echo en_GB.UTF-8 UTF-8 > /ect/locale.gen
+echo en_GB.UTF-8 UTF-8 >> /etc/locale.gen
 locale-gen
 echo LANG=en_GB.UTF-8 > /etc/locale.conf
 echo LANGUAGE=en_GB >> /etc/locale.conf
