@@ -1,5 +1,5 @@
 # Arch + i3-gaps Install Guide
-### Original: https://gist.github.com/fjpalacios/441f2f6d27f25ee238b9bfcb068865db
+#### Original: https://gist.github.com/fjpalacios/441f2f6d27f25ee238b9bfcb068865db
 First set up your keyboard layout. For example, in Spanish:
 ```
    # loadkeys es
