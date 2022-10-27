@@ -46,7 +46,7 @@ echo Set new root passwd!
 passwd
 
 # Initiate reboot
-exit
-umount -R /mnt
-swapoff /dev/nvme0n1p2
-reboot
+# exit
+# umount -R /mnt
+# swapoff /dev/nvme0n1p2
+# reboot
