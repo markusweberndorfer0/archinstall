@@ -29,7 +29,7 @@ sudo systemctl enable fstrim.timer
 
 # Install i3-gaps
 sudo pacman -S xorg-server xorg-apps xorg-xinit
-sudo pacman -S i3-gaps i3blocks i3lock numlockx
+sudo pacman -S i3-gaps i3blocks i3lock i3status numlockx
 sudo pacman -S lightdm lightdm-gtk-greeter --needed
 sudo systemctl enable lightdm
 
