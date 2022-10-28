@@ -21,7 +21,7 @@ sed -i 's/font pango:monospace 8/font pango:Ubuntu 11/' ~/.config/i3/config
 
 # Configure workspaces
 sed -i 's/set $ws1 "1"/set $ws1 "1: Terminal"/' ~/.config/i3/config
-sed -i 's/set $ws2 "2"/set $ws2 "2: Firefox"/' ~/.config/i3/config
+sed -i 's/set $ws2 "2"/set $ws2 "2: Firefox"/' ~/.config/i3/config
 sed -i 's/set $ws3 "3"/set $ws3 "3: Code"/' ~/.config/i3/config
 sed -i 's/set $ws4 "4"/set $ws4 "4: VirtualBox"/' ~/.config/i3/config
 
