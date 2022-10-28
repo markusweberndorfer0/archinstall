@@ -11,7 +11,7 @@ echo "exec_always setxkbmap -layout de" >> ~/.config/i3/config
 # Configure theme
 sudo pacman -S lxappearance arc-gtk-theme materia-gtk-theme papirus-icon-theme
 sudo sed -i 's/#background=/background=#2f343f/' /etc/lightdm/lightdm-gtk-greeter.conf
-sudo sed -i 's/#theme-name=/theme-name=Arc-Dark/' /etc/lightdm/lightdm-gtk-greeter.conf
+sudo sed -i 's/#theme-name=/theme-name=Materia-Dark/' /etc/lightdm/lightdm-gtk-greeter.conf
 sudo sed -i 's/#icon-theme-name=/icon-theme-name=Papirus-Dark/' /etc/lightdm/lightdm-gtk-greeter.conf
 sudo sed -i 's/#font-name=/font-name=Arial/' /etc/lightdm/lightdm-gtk-greeter.conf
 
