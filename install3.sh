@@ -42,7 +42,7 @@ yay -Syu volctl
 
 # Install software
 sudo pacman -S firefox vlc --needed
-sudo pacman -S terminator
+sudo pacman -S terminator thunar
 
 # Download next script
 curl https://raw.githubusercontent.com/markusplayzz/archinstall/main/install4.sh -o ~/install4.sh
