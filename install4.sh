@@ -6,7 +6,7 @@ echo Color >> /etc/pacman.conf
 echo ILoveCandy >> /etc/pacman.conf
 
 # Set keyboard layout
-setxkbmap -layout de
+sudo setxkbmap -layout de
 
 # Configure theme
 sudo pacman -S lxappearance arc-gtk-theme papirus-icon-theme
