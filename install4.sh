@@ -52,6 +52,9 @@ echo "bindsym XF86AudioPause exec --no-startup-id playerctl pause" >> ~/.config/
 echo "bindsym XF86AudioNext exec --no-startup-id playerctl next" >> ~/.config/i3/config
 echo "bindsym XF86AudioPrev exec --no-startup-id playerctl previous" >> ~/.config/i3/config
 
+# Config i3-status
+mkdir ~/.config/i3status
+
 # Delete installation scripts
 sudo rm /root/install2.sh
 rm ~/install3.sh
