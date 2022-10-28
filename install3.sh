@@ -37,7 +37,7 @@ sudo pacman -S ttf-liberation ttf-droid ttf-roboto terminus-font
 
 # Install tools
 sudo pacman -S rxvt-unicode ranger rofi dmenu --needed
-sudo pacman -S pavucontrol-qt
+sudo pacman -S pavucontrol-qt playerctl
 yay -Syu volctl
 
 # Install software

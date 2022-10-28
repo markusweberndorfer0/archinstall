@@ -27,6 +27,18 @@ sed -i 's/i3-sensible-terminal/termite/g' ~/.config/i3/config
 echo "# volctl"
 echo "exec --no-startup-id volctl"
 
+# Assign screen brightness controls
+echo "# Screen brightness controls" >> ~/.config/i3/config
+echo "bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 20" >> ~/.config/i3/config
+echo "bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 20" >> ~/.config/i3/config
+
+# Assign media player controls
+echo "# Media player controls" >> ~/.config/i3/config
+echo "bindsym XF86AudioPlay exec --no-startup-id playerctl play" >> ~/.config/i3/config
+echo "bindsym XF86AudioPause exec --no-startup-id playerctl pause" >> ~/.config/i3/config
+echo "bindsym XF86AudioNext exec --no-startup-id playerctl next" >> ~/.config/i3/config
+echo "bindsym XF86AudioPrev exec --no-startup-id playerctl previous" >> ~/.config/i3/config
+
 # Delete installation scripts
 sudo rm /root/install2.sh
 rm ~/install3.sh
