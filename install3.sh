@@ -36,7 +36,9 @@ sudo pacman -S noto-fonts ttf-ubuntu-font-family ttf-dejavu ttf-freefont
 sudo pacman -S ttf-liberation ttf-droid ttf-roboto terminus-font
 
 # Install tools
-sudo pacman -S rxvt-unicode ranger rofi dmenu termite --needed
+sudo pacman -S rxvt-unicode ranger rofi dmenu --needed
+sudo pacman -S pavucontrol-qt
+yay -Syu volctl
 
 # Install software
 sudo pacman -S firefox vlc --needed
