@@ -18,7 +18,7 @@ sudo sed -i 's/#font-name=/font-name=Arial/' /etc/lightdm/lightdm-gtk-greeter.co
 
 # Assign i3lock to MOD + X
 echo "# i3lock" >> ~/.config/i3/config
-echo "bindsym $mod+x exec i3lock" >> ~/.config/i3/config
+echo "bindsym \$mod+x exec i3lock" >> ~/.config/i3/config
 
 # Change standard console
 sed -i 's/i3-sensible-terminal/termite/g' ~/.config/i3/config
