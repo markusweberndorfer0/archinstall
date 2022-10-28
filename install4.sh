@@ -6,6 +6,7 @@ echo ILoveCandy >> /etc/pacman.conf
 
 # Set keyboard layout
 sudo setxkbmap de
+echo "# Set keymap" >> ~/.config/i3/config
 echo "exec_always setxkbmap de" >> ~/.config/i3/config
 
 # Configure theme
