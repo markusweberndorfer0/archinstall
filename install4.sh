@@ -62,7 +62,8 @@ sed -i 's/format_up = "W: (%quality at %essid) %ip"/format_up = " (%quality a
 sed -i 's/format_down = "W: down"/format_down = " down"/' ~/.config/i3status/i3status.conf
 sed -i 's/format_up = "E: %ip (%speed)"/format_up = " %ip (%speed)"/' ~/.config/i3status/i3status.conf
 sed -i 's/format = "%status %percentage %remaining"/format = " %status %percentage %remaining"/' ~/.config/i3status/i3status.conf
-sed -i 's/format = "%avail"/format = " %avail"/' ~/.config/i3status/i3status.conf
+sed -i 's/order += "disk \/"/#order += "disk \/"/' ~/.config/i3status/i3status.conf
+sed -i 's/order += "load"/#order += "load"/' ~/.config/i3status/i3status.conf
 sed -i 's/format = "%1min"/format = " %1min"/' ~/.config/i3status/i3status.conf
 sed -i 's/format = "%Y-%m-%d %H:%M:%S"/format = " %Y-%m-%d %H:%M:%S"/' ~/.config/i3status/i3status.conf
 
