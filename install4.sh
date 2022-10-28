@@ -36,6 +36,10 @@ sed -i 's/i3-sensible-terminal/termite/g' ~/.config/i3/config
 echo "# volctl" >> ~/.config/i3/config
 echo "exec --no-startup-id volctl" >> ~/.config/i3/config
 
+# Configure bluetooth
+echo "# blueman-applet" >> ~/.config/i3/config
+echo "exec --no-startup-id blueman-applet" >> ~/.config/i3/config
+
 # Assign screen brightness controls
 # HP Omen: https://forum.manjaro.org/t/no-brightness-control-on-nvidia-hp-omen/95329
 echo "# Screen brightness controls" >> ~/.config/i3/config
