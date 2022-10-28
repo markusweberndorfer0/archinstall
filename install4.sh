@@ -67,13 +67,13 @@ sed -i 's/format = "%1min"/format = " %1min"/' ~/.config/i3status/i3status.conf
 sed -i 's/format = "%Y-%m-%d %H:%M:%S"/format = " %Y-%m-%d %H:%M:%S"/' ~/.config/i3status/i3status.conf
 
 # Change color themes
-sed -i 's/bindsym $mod+r mode "resize"/bindsym $mod+r mode "resize"\n\n# Color palette\nset $bgcolor    #01579B\nset $ibgcolor   #424242\nset $textcolor    #ffffff\nset $ubgcolor  #ff0000/' ~/.config/i3/config
-echo "BGColors" >> ~/.config/i3/config
+sed -i 's/bindsym $mod+r mode "resize"/bindsym $mod+r mode "resize"\n\n# Color palette\nset $bgcolor    #01579B\nset $ibgcolor   #424242\nset $textcolor    #ffffff\nset $ubgcolor  #ff0000\nset $indicator #0277BD/' ~/.config/i3/config
+echo "#BGColors" >> ~/.config/i3/config
 echo "#                         border      background          text        indicator" >> ~/.config/i3/config
-echo "client.focused            $bgcolor    $bgcolor            $textcolor  $bgcolor" >> ~/.config/i3/config
-echo "client.unfocused          $ibgcolor   $ibgcolor           $textcolor  $ibgcolor" >> ~/.config/i3/config
-echo "client.focused_inactive   $ibgcolor   $ibgcolor           $textcolor  $ibgcolor" >> ~/.config/i3/config
-echo "client.urgent             $ubgcolor   $ubgcolor           $textcolor  $ubgcolor" >> ~/.config/i3/config
+echo "client.focused            \$bgcolor    \$bgcolor            \$textcolor  \$indicator" >> ~/.config/i3/config
+echo "client.unfocused          \$ibgcolor   \$ibgcolor           \$textcolor  \$indicator" >> ~/.config/i3/config
+echo "client.focused_inactive   \$ibgcolor   \$ibgcolor           \$textcolor  \$indicator" >> ~/.config/i3/config
+echo "client.urgent             \$ubgcolor   \$ubgcolor           \$textcolor  \$indicator" >> ~/.config/i3/config
 
 # Delete installation scripts
 sudo rm /root/install2.sh
