@@ -45,8 +45,14 @@ echo "blacklist nouveau" >> /usr/lib/modprobe.d/nvidia.conf
 echo Set new root passwd!
 passwd
 
+# Create user "markus"
+useradd -m -g users -G wheel,storage,power,audio markus
+echo Set new users passswd
+passwd markus
+
+# Grant sudo rights to created user
+echo "%wheel ALL=(ALL) ALL" >> /etc/sudoers
+
 # Initiate reboot
 # exit
-# umount -R /mnt
-# swapoff /dev/nvme0n1p2
 # reboot
