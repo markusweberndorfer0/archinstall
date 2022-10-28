@@ -12,10 +12,6 @@ git clone https://aur.archlinux.org/yay.git
 cd ./yay
 makepkg -si
 
-# Customize packman
-echo Color >> /etc/pacman.conf
-echo ILoveCandy >> /etc/pacman.conf
-
 # Manage bluetooth
 sudo pacman -S bluez bluez-utils blueman
 sudo systemctl enable bluetooth
