@@ -1,8 +1,7 @@
 # Only UEFI
 
 # Customize packman
-echo Color >> /etc/pacman.conf
-echo ILoveCandy >> /etc/pacman.conf
+sudo sed -i 's/#Color/Color\nILoveCandy/' /etc/pacman.conf
 
 # Set keyboard layout
 sudo setxkbmap de
