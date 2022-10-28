@@ -13,7 +13,7 @@ sudo pacman -S lxappearance arc-gtk-theme materia-gtk-theme papirus-icon-theme
 sudo sed -i 's/#background=/background=#2f343f/' /etc/lightdm/lightdm-gtk-greeter.conf
 sudo sed -i 's/#theme-name=/theme-name=Materia-Dark/' /etc/lightdm/lightdm-gtk-greeter.conf
 sudo sed -i 's/#icon-theme-name=/icon-theme-name=Papirus-Dark/' /etc/lightdm/lightdm-gtk-greeter.conf
-sudo sed -i 's/#font-name=/font-name=Arial/' /etc/lightdm/lightdm-gtk-greeter.conf
+sudo sed -i 's/#font-name=/font-name=Ubuntu 11/' /etc/lightdm/lightdm-gtk-greeter.conf
 
 # Change i3-gaps font-family and size
 sed -i 's/font pango:monospace 8/font pango:Ubuntu 11/' ~/.config/i3/config
