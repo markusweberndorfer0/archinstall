@@ -33,7 +33,7 @@ sudo systemctl enable lightdm
 
 # Install fonts
 sudo pacman -S noto-fonts ttf-ubuntu-font-family ttf-dejavu ttf-freefont
-sudo pacman -S ttf-liberation ttf-droid ttf-roboto terminus-font
+sudo pacman -S ttf-liberation ttf-droid ttf-roboto terminus-font ttf-font-awesome
 
 # Install tools
 sudo pacman -S rxvt-unicode ranger rofi dmenu --needed
