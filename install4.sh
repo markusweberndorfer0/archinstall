@@ -14,6 +14,9 @@ sudo sed -i 's/#theme-name=/theme-name=Arc-Dark/' /etc/lightdm/lightdm-gtk-greet
 sudo sed -i 's/#icon-theme-name=/icon-theme-name=Papirus-Dark/' /etc/lightdm/lightdm-gtk-greeter.conf
 sudo sed -i 's/#font-name=/font-name=Arial/' /etc/lightdm/lightdm-gtk-greeter.conf
 
+# Change i3-gaps font-family and size
+sed -i 's/font pango:monospace 8/font pango:Ubuntu 11/' ~/.config/i3/config
+
 # Assign i3lock to MOD + X
 echo "# i3lock" >> ~/.config/i3/config
 echo "bindsym \$mod+x exec i3lock" >> ~/.config/i3/config
