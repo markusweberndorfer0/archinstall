@@ -19,6 +19,12 @@ sudo sed -i 's/#font-name=/font-name=Arial/' /etc/lightdm/lightdm-gtk-greeter.co
 # Change i3-gaps font-family and size
 sed -i 's/font pango:monospace 8/font pango:Ubuntu 11/' ~/.config/i3/config
 
+# Configure workspaces
+sed -i 's/set $ws1 "1"/set $ws1 "1: Terminal"'
+sed -i 's/set $ws2 "2"/set $ws2 "2: Browser"'
+sed -i 's/set $ws3 "3"/set $ws3 "3: Code"'
+sed -i 's/set $ws4 "4"/set $ws4 "4: VirtualBox"'
+
 # Assign i3lock to MOD + X
 echo "# i3lock" >> ~/.config/i3/config
 echo "bindsym \$mod+x exec i3lock" >> ~/.config/i3/config
