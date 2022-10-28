@@ -6,8 +6,8 @@ echo Color >> /etc/pacman.conf
 echo ILoveCandy >> /etc/pacman.conf
 
 # Set keyboard layout
-exec setxkbmap -layout us,de
-exec setxkbmap -option 'grp:alt_shift_toggle'
+setxkbmap -layout us,de
+setxkbmap -option 'grp:alt_shift_toggle'
 
 # Configure theme
 sudo pacman -S lxappearance arc-gtk-theme papirus-icon-theme
@@ -24,6 +24,8 @@ echo bindsym $mod+x exec i3lock >> ~/.config/i3/config
 sed -i 's/i3-sensible-terminal/termite/g' ~/.config/i3/config
 
 # Configure audio
+echo "# volctl"
+echo "exec --no-startup-id volctl"
 
 # Delete installation scripts
 sudo rm /root/install2.sh
