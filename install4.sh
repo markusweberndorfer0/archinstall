@@ -54,6 +54,17 @@ echo "bindsym XF86AudioPrev exec --no-startup-id playerctl previous" >> ~/.confi
 
 # Config i3-status
 mkdir ~/.config/i3status
+sudo cp /etc/i3status.conf ~/.config/i3status/i3status.conf
+sudo chown markus:users ~/.config/i3status/i3status.conf
+sed -i 's/status_command i3status/status_command i3status -c \/home\/markus\/.config\/i3status\/i3status.conf/' ~/.config/i3/config
+sed -i 's/order += "ipv6"/#order += "ipv6"/' ~/.config/i3status/i3status.conf
+sed -i 's/format_up = "W: (%quality at %essid) %ip"/format_up = " (%quality at %essid) %ip"/' ~/.config/i3status/i3status.conf
+sed -i 's/format_down = "W: down"/format_down = " down"/' ~/.config/i3status/i3status.conf
+sed -i 's/format_up = "E: %ip (%speed)"/format_up = " %ip (%speed)"/' ~/.config/i3status/i3status.conf
+sed -i 's/format = "%status %percentage %remaining"/format = " %status %percentage %remaining"/' ~/.config/i3status/i3status.conf
+sed -i 's/format = "%avail"/format = " %avail"/' ~/.config/i3status/i3status.conf
+sed -i 's/format = "%1min"/format = " %1min"/' ~/.config/i3status/i3status.conf
+sed -i 's/format = "%Y-%m-%d %H:%M:%S"/format = " %Y-%m-%d %H:%M:%S"/' ~/.config/i3status/i3status.conf
 
 # Delete installation scripts
 sudo rm /root/install2.sh
