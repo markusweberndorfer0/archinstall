@@ -74,6 +74,7 @@ echo "client.focused            \$bgcolor    \$bgcolor            \$textcolor  \
 echo "client.unfocused          \$ibgcolor   \$ibgcolor           \$textcolor  \$indicator" >> ~/.config/i3/config
 echo "client.focused_inactive   \$ibgcolor   \$ibgcolor           \$textcolor  \$indicator" >> ~/.config/i3/config
 echo "client.urgent             \$ubgcolor   \$ubgcolor           \$textcolor  \$indicator" >> ~/.config/i3/config
+sed -i 's/status_command i3status -c \/home\/markus\/.config\/i3status\/i3status.conf/status_command i3status -c \/home\/markus\/.config\/i3status\/i3status.conf\n    colors{\n        background $bgcolor\n        separator $indicator\n        #   border  background  text\n        focused_workspace   $bgcolor    $bgcolor    $textcolor\n        inactive_workspace  $ibgcolor   $ibgcolor   %textcolor\n        urgent_workspace    $ubgcolor   $ubgcolor   $textcolor\n}/' ~/.config/i3/config
 
 # Delete installation scripts
 sudo rm /root/install2.sh
