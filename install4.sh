@@ -1,6 +1,5 @@
 # Only UEFI
 
-
 # Customize packman
 echo Color >> /etc/pacman.conf
 echo ILoveCandy >> /etc/pacman.conf
