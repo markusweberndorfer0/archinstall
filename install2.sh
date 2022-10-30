@@ -33,7 +33,7 @@ echo "127.0.1.1 ArchL.localdomain       ArchL" >> /etc/hosts
 # Install other packages
 pacman -S iw wpa_supplicant dialog intel-ucode git reflector lshw unzip htop
 pacman -S wget pulseaudio alsa-utils alsa-plugins pavucontrol xdg-user-dirs
-reflector -c "AT" -f 12 -l 10 -n 12 --save /etc/pacman.d/mirrorlist
+reflector -c "AT" --latest 5 --sort rate --save /etc/pacman.d/mirrorlist
 
 # Install nvidia drivers
 sudo pacman -S nvidia
