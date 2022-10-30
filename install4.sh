@@ -24,9 +24,12 @@ sed -i 's/set $ws2 "2"/set $ws2 "2: Firefox"/' ~/.config/i3/config
 sed -i 's/set $ws3 "3"/set $ws3 "3: Code"/' ~/.config/i3/config
 sed -i 's/set $ws4 "4"/set $ws4 "4: VirtualBox"/' ~/.config/i3/config
 
-# Assign i3lock to MOD + X
+# i3lock config
 echo "# i3lock" >> ~/.config/i3/config
-echo "bindsym \$mod+x exec i3lock" >> ~/.config/i3/config
+mkdir ~/.config/i3lock
+curl https://raw.githubusercontent.com/markusplayzz/archinstall/main/i3lockconfig -o ~/.config/i3lock/i3lockconfig
+sudo chown markus:users ~/.config/i3lock/i3lockconfig
+echo "bindsym \$mod+x exec sh /home/markus/.config/i3lock/i3lockconfig" >> ~/.config/i3/config
 
 # Change standard console
 sed -i 's/i3-sensible-terminal/terminator/g' ~/.config/i3/config
