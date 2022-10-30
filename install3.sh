@@ -38,7 +38,8 @@ sudo pacman -S ttf-liberation ttf-droid ttf-roboto terminus-font ttf-font-awesom
 # Install tools
 sudo pacman -S rxvt-unicode ranger rofi dmenu --needed
 sudo pacman -S pavucontrol-qt playerctl
-yay -Syu volctl bumblebee-status
+yay -Syu volctl
+yay -S bumblebee-status
 
 # Install software
 sudo pacman -S firefox vlc --needed
