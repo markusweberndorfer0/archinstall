@@ -9,9 +9,9 @@ echo "# Set keymap" >> ~/.config/i3/config
 echo "exec_always setxkbmap -layout de" >> ~/.config/i3/config
 
 # Configure theme
-sudo pacman -S lxappearance arc-gtk-theme materia-gtk-theme papirus-icon-theme
+sudo pacman -S lxappearance materia-gtk-theme papirus-icon-theme
 sudo sed -i 's/#background=/background=#2f343f/' /etc/lightdm/lightdm-gtk-greeter.conf
-sudo sed -i 's/#theme-name=/theme-name=Materia-Dark/' /etc/lightdm/lightdm-gtk-greeter.conf
+sudo sed -i 's/#theme-name=/theme-name=Materia/' /etc/lightdm/lightdm-gtk-greeter.conf
 sudo sed -i 's/#icon-theme-name=/icon-theme-name=Papirus-Dark/' /etc/lightdm/lightdm-gtk-greeter.conf
 sudo sed -i 's/#font-name=/font-name=Ubuntu 11/' /etc/lightdm/lightdm-gtk-greeter.conf
 
@@ -68,7 +68,7 @@ sed -i 's/format = "%1min"/format = " %1min"/' ~/.config/i3status/i3status.conf
 sed -i 's/format = "%Y-%m-%d %H:%M:%S"/format = " %Y-%m-%d %H:%M:%S"/' ~/.config/i3status/i3status.conf
 
 # Change color themes
-sed -i 's/bindsym $mod+r mode "resize"/bindsym $mod+r mode "resize"\n\n# Color palette\nset $bgcolor    #01579B\nset $ibgcolor   #424242\nset $textcolor    #ffffff\nset $ubgcolor  #ff0000\nset $indicator #0277BD/' ~/.config/i3/config
+sed -i 's/bindsym $mod+r mode "resize"/bindsym $mod+r mode "resize"\n\n# Color palette\nset $bgcolor    #598392\nset $ibgcolor   #124559\nset $textcolor    #ffffff\nset $ubgcolor  #ff0000\nset $indicator #124559/' ~/.config/i3/config
 echo "#BGColors" >> ~/.config/i3/config
 echo "#                         border      background          text        indicator" >> ~/.config/i3/config
 echo "client.focused            \$bgcolor    \$bgcolor            \$textcolor  \$indicator" >> ~/.config/i3/config
