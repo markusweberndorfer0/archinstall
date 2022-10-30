@@ -69,13 +69,19 @@ sed -i 's/format = "%Y-%m-%d %H:%M:%S"/format = " %Y-%m-%d %H:%M:%S"/' ~/.con
 
 # Change color themes
 sed -i 's/bindsym $mod+r mode "resize"/bindsym $mod+r mode "resize"\n\n# Color palette\nset $bgcolor    #598392\nset $ibgcolor   #124559\nset $textcolor    #ffffff\nset $ubgcolor  #ff0000\nset $indicator #124559/' ~/.config/i3/config
-echo "#BGColors" >> ~/.config/i3/config
+echo "# BGColors" >> ~/.config/i3/config
 echo "#                         border      background          text        indicator" >> ~/.config/i3/config
 echo "client.focused            \$bgcolor    \$bgcolor            \$textcolor  \$indicator" >> ~/.config/i3/config
 echo "client.unfocused          \$ibgcolor   \$ibgcolor           \$textcolor  \$indicator" >> ~/.config/i3/config
 echo "client.focused_inactive   \$ibgcolor   \$ibgcolor           \$textcolor  \$indicator" >> ~/.config/i3/config
 echo "client.urgent             \$ubgcolor   \$ubgcolor           \$textcolor  \$indicator" >> ~/.config/i3/config
 sed -i 's/status_command i3status -c \/home\/markus\/.config\/i3status\/i3status.conf/status_command i3status -c \/home\/markus\/.config\/i3status\/i3status.conf\n    colors{\n        background $bgcolor\n        separator $indicator\n        #   border  background  text\n        focused_workspace   $bgcolor    $bgcolor    $textcolor\n        inactive_workspace  $ibgcolor   $ibgcolor   %textcolor\n        urgent_workspace    $ubgcolor   $ubgcolor   $textcolor\n}/' ~/.config/i3/config
+
+# Window gaps
+echo "# Window gaps" >> ~/.config/i3/config
+echo "for_window [class="^.*"] border pixel 2" >> ~/.config/i3/config
+echo "gaps inner 10" >> ~/.config/i3/config
+echo "gaps outer 5" >> ~/.config/i3/config
 
 # Delete installation scripts
 sudo rm /root/install2.sh
