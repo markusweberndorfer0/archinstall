@@ -35,6 +35,8 @@ sed -i 's/i3-sensible-terminal/termite/g' ~/.config/i3/config
 echo "# volctl" >> ~/.config/i3/config
 echo "exec --no-startup-id volctl" >> ~/.config/i3/config
 
+# Configure 
+
 # Configure bluetooth
 echo "# blueman-applet" >> ~/.config/i3/config
 echo "exec --no-startup-id blueman-applet" >> ~/.config/i3/config
@@ -52,6 +54,9 @@ echo "bindsym XF86AudioPause exec --no-startup-id playerctl pause" >> ~/.config/
 echo "bindsym XF86AudioNext exec --no-startup-id playerctl next" >> ~/.config/i3/config
 echo "bindsym XF86AudioPrev exec --no-startup-id playerctl previous" >> ~/.config/i3/config
 
+# Config bumblebee
+sed -i 's/status_command i3status/status_command status_command bumblebee-status -m cpu nic memory battery time pulseout xrandr -p pulseout.right-click="pavucontrol" -t solarized-powerline\n        position top/' ~/.config/i3/config
+
 # Change color themes
 sed -i 's/bindsym $mod+r mode "resize"/bindsym $mod+r mode "resize"\n\n# Color palette\nset $bgcolor    #598392\nset $ibgcolor   #124559\nset $textcolor    #ffffff\nset $ubgcolor  #ff0000\nset $indicator #124559/' ~/.config/i3/config
 echo "# BGColors" >> ~/.config/i3/config
@@ -67,6 +72,13 @@ echo "# Window gaps" >> ~/.config/i3/config
 echo "for_window [class="^.*"] border pixel 2" >> ~/.config/i3/config
 echo "gaps inner 10" >> ~/.config/i3/config
 echo "gaps outer 5" >> ~/.config/i3/config
+
+# Move workspaces between monitors
+echo "# Move workspaces between monitors"
+echo "bindsym $mod+Control+Right move workspace to output right"
+echo "bindsym $mod+Control+Left move workspace to output left"
+echo "bindsym $mod+Control+Up move workspace to output up"
+echo "bindsym $mod+Control+Down move workspace to output down"
 
 # Delete installation scripts
 sudo rm /root/install2.sh

@@ -37,7 +37,8 @@ sudo pacman -S ttf-liberation ttf-droid ttf-roboto terminus-font ttf-font-awesom
 
 # Install tools
 sudo pacman -S rxvt-unicode ranger rofi dmenu --needed
-sudo pacman -S pavucontrol-qt playerctl
+sudo pacman -S pavucontrol-qt playerctl arandr
+sudo pacman -S optimus-manager optimus-manager-qt
 yay -Syu volctl
 yay -S bumblebee-status
 
