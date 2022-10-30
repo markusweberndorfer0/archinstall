@@ -34,5 +34,8 @@ timedatectl set-ntp true
 pacstrap /mnt base base-devel linux linux-firmware vi vim nano
 genfstab -U /mnt >> /mnt/etc/fstab
 
+# Get next script
+curl https://raw.githubusercontent.com/markusplayzz/archinstall/main/install2.sh -o /mnt/install2.sh
+
 # Enter new system
 # arch-chroot /mnt

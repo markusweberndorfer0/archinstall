@@ -52,6 +52,9 @@ passwd markus
 # Grant sudo rights to created user
 echo "%wheel ALL=(ALL) ALL" >> /etc/sudoers
 
+# Get next script
+curl https://raw.githubusercontent.com/markusplayzz/archinstall/main/install3.sh -o /home/markus/install3.sh
+
 # Initiate reboot
 # exit
 # reboot
