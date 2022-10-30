@@ -52,21 +52,6 @@ echo "bindsym XF86AudioPause exec --no-startup-id playerctl pause" >> ~/.config/
 echo "bindsym XF86AudioNext exec --no-startup-id playerctl next" >> ~/.config/i3/config
 echo "bindsym XF86AudioPrev exec --no-startup-id playerctl previous" >> ~/.config/i3/config
 
-# Config i3-status
-mkdir ~/.config/i3status
-sudo cp /etc/i3status.conf ~/.config/i3status/i3status.conf
-sudo chown markus:users ~/.config/i3status/i3status.conf
-sed -i 's/status_command i3status/status_command i3status -c \/home\/markus\/.config\/i3status\/i3status.conf/' ~/.config/i3/config
-sed -i 's/order += "ipv6"/#order += "ipv6"/' ~/.config/i3status/i3status.conf
-sed -i 's/format_up = "W: (%quality at %essid) %ip"/format_up = " (%quality at %essid) %ip"/' ~/.config/i3status/i3status.conf
-sed -i 's/format_down = "W: down"/format_down = " down"/' ~/.config/i3status/i3status.conf
-sed -i 's/format_up = "E: %ip (%speed)"/format_up = " %ip (%speed)"/' ~/.config/i3status/i3status.conf
-sed -i 's/format = "%status %percentage %remaining"/format = " %status %percentage %remaining"/' ~/.config/i3status/i3status.conf
-sed -i 's/order += "disk \/"/#order += "disk \/"/' ~/.config/i3status/i3status.conf
-sed -i 's/order += "load"/#order += "load"/' ~/.config/i3status/i3status.conf
-sed -i 's/format = "%1min"/format = " %1min"/' ~/.config/i3status/i3status.conf
-sed -i 's/format = "%Y-%m-%d %H:%M:%S"/format = " %Y-%m-%d %H:%M:%S"/' ~/.config/i3status/i3status.conf
-
 # Change color themes
 sed -i 's/bindsym $mod+r mode "resize"/bindsym $mod+r mode "resize"\n\n# Color palette\nset $bgcolor    #598392\nset $ibgcolor   #124559\nset $textcolor    #ffffff\nset $ubgcolor  #ff0000\nset $indicator #124559/' ~/.config/i3/config
 echo "# BGColors" >> ~/.config/i3/config
@@ -75,7 +60,7 @@ echo "client.focused            \$bgcolor    \$bgcolor            \$textcolor  \
 echo "client.unfocused          \$ibgcolor   \$ibgcolor           \$textcolor  \$indicator" >> ~/.config/i3/config
 echo "client.focused_inactive   \$ibgcolor   \$ibgcolor           \$textcolor  \$indicator" >> ~/.config/i3/config
 echo "client.urgent             \$ubgcolor   \$ubgcolor           \$textcolor  \$indicator" >> ~/.config/i3/config
-sed -i 's/status_command i3status -c \/home\/markus\/.config\/i3status\/i3status.conf/status_command i3status -c \/home\/markus\/.config\/i3status\/i3status.conf\n    colors{\n        background $bgcolor\n        separator $indicator\n        #   border  background  text\n        focused_workspace   $bgcolor    $bgcolor    $textcolor\n        inactive_workspace  $ibgcolor   $ibgcolor   %textcolor\n        urgent_workspace    $ubgcolor   $ubgcolor   $textcolor\n}/' ~/.config/i3/config
+sed -i 's/position top/position top\n    colors{\n        background $bgcolor\n        separator $indicator\n        #   border  background  text\n        focused_workspace   $bgcolor    $bgcolor    $textcolor\n        inactive_workspace  $ibgcolor   $ibgcolor   %textcolor\n        urgent_workspace    $ubgcolor   $ubgcolor   $textcolor\n}/' ~/.config/i3/config
 
 # Window gaps
 echo "# Window gaps" >> ~/.config/i3/config
