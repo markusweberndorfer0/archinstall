@@ -13,7 +13,7 @@
 # Get best package mirrors
 pacman -Sy
 pacman -S reflector
-reflector --latest 5 --sort rate --save /etc/pacman.d/mirrorlist
+reflector -c "AT" -f 12 -l 10 -n 12 --save /etc/pacman.d/mirrorlist
 
 # Format disks
 mkfs.fat -F32 /dev/nvme0n1p1
