@@ -81,7 +81,7 @@ echo "bindsym \$mod+Control+Up move workspace to output up" >> ~/.config/i3/conf
 echo "bindsym \$mod+Control+Down move workspace to output down" >> ~/.config/i3/config
 
 # Delete installation scripts
-sudo rm /root/install2.sh
+sudo rm /install2.sh
 rm ~/install3.sh
 rm ~/install4.sh
 
