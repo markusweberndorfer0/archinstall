@@ -38,13 +38,13 @@ sudo pacman -S ttf-liberation ttf-droid ttf-roboto terminus-font ttf-font-awesom
 # Install tools
 sudo pacman -S rxvt-unicode ranger rofi dmenu --needed
 sudo pacman -S pavucontrol-qt playerctl arandr
-sudo pacman -S optimus-manager optimus-manager-qt
 yay -Syu volctl
 yay -S bumblebee-status
 
 # Install software
 sudo pacman -S firefox vlc --needed
 sudo pacman -S terminator thunar
+sudo pacman -S optimus-manager optimus-manager-qt
 
 # Download next script
 curl https://raw.githubusercontent.com/markusplayzz/archinstall/main/install4.sh -o ~/install4.sh

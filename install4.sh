@@ -74,11 +74,11 @@ echo "gaps inner 10" >> ~/.config/i3/config
 echo "gaps outer 5" >> ~/.config/i3/config
 
 # Move workspaces between monitors
-echo "# Move workspaces between monitors"
-echo "bindsym $mod+Control+Right move workspace to output right"
-echo "bindsym $mod+Control+Left move workspace to output left"
-echo "bindsym $mod+Control+Up move workspace to output up"
-echo "bindsym $mod+Control+Down move workspace to output down"
+echo "# Move workspaces between monitors" >> ~/.config/i3/config
+echo "bindsym \$mod+Control+Right move workspace to output right" >> ~/.config/i3/config
+echo "bindsym \$mod+Control+Left move workspace to output left" >> ~/.config/i3/config
+echo "bindsym \$mod+Control+Up move workspace to output up" >> ~/.config/i3/config
+echo "bindsym \$mod+Control+Down move workspace to output down" >> ~/.config/i3/config
 
 # Delete installation scripts
 sudo rm /root/install2.sh
