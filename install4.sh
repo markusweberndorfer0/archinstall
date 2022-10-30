@@ -29,7 +29,7 @@ echo "# i3lock" >> ~/.config/i3/config
 echo "bindsym \$mod+x exec i3lock" >> ~/.config/i3/config
 
 # Change standard console
-sed -i 's/i3-sensible-terminal/termite/g' ~/.config/i3/config
+sed -i 's/i3-sensible-terminal/terminator/g' ~/.config/i3/config
 
 # Configure audio
 echo "# volctl" >> ~/.config/i3/config
