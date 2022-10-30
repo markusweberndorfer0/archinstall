@@ -44,6 +44,8 @@ yay -S bumblebee-status
 sudo pacman -S firefox vlc --needed
 sudo pacman -S terminator thunar
 sudo pacman -S optimus-manager optimus-manager-qt
+yay -S optimus-manager
+yay -S optimus-manager-qt
 
 # Download next script
 curl https://raw.githubusercontent.com/markusplayzz/archinstall/main/install4.sh -o ~/install4.sh
