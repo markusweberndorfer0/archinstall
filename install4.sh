@@ -55,7 +55,7 @@ echo "bindsym XF86AudioNext exec --no-startup-id playerctl next" >> ~/.config/i3
 echo "bindsym XF86AudioPrev exec --no-startup-id playerctl previous" >> ~/.config/i3/config
 
 # Config bumblebee
-sed -i 's/status_command i3status/status_command status_command bumblebee-status -m cpu nic memory battery time pulseout xrandr -p pulseout.right-click="pavucontrol" xrandr.right-click="arandr" -t solarized-powerline\n        position top/' ~/.config/i3/config
+sed -i 's/status_command i3status/status_command bumblebee-status -m cpu nic memory battery time pulseout xrandr -p pulseout.right-click="pavucontrol" xrandr.right-click="arandr" -t solarized-powerline\n        position top/' ~/.config/i3/config
 
 # Change color themes
 sed -i 's/bindsym $mod+r mode "resize"/bindsym $mod+r mode "resize"\n\n# Color palette\nset $bgcolor    #598392\nset $ibgcolor   #124559\nset $textcolor    #ffffff\nset $ubgcolor  #ff0000\nset $indicator #124559/' ~/.config/i3/config
