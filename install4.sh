@@ -86,4 +86,4 @@ rm ~/install3.sh
 rm ~/install4.sh
 
 # Reboot
-reboot
+# reboot
