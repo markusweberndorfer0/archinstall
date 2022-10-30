@@ -35,7 +35,9 @@ sed -i 's/i3-sensible-terminal/terminator/g' ~/.config/i3/config
 echo "# volctl" >> ~/.config/i3/config
 echo "exec --no-startup-id volctl" >> ~/.config/i3/config
 
-# Configure 
+# Configure optimus-manager
+echo "# optimus-manager-qt" >> ~/.config/i3/config
+echo "exec_always optimus-manager-qt" >> ~/.config/i3/config
 
 # Configure bluetooth
 echo "# blueman-applet" >> ~/.config/i3/config
