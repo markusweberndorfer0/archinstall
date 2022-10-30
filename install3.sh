@@ -1,6 +1,5 @@
 # Only UEFI
 # Login to created user
-# su - markus
 
 # Update user dirs
 xdg-user-dirs-update
