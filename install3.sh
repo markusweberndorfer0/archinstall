@@ -54,6 +54,7 @@ yay -S teamviewer
 yay -S spotify
 yay -S foxitreader
 yay -S teams
+yay -S onedrivegui-git
 systemctl enable optimus-manager
 
 # Download next script
