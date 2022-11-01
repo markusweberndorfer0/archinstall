@@ -26,7 +26,7 @@ sudo systemctl enable fstrim.timer
 
 # Install i3-gaps
 sudo pacman -S xorg-server xorg-apps xorg-xinit --noconfirm
-sudo pacman -S i3-gaps i3blocks i3lock i3status numlockx --noconfirm
+sudo pacman -S i3-gaps i3blocks i3status numlockx --noconfirm
 sudo pacman -S lightdm lightdm-gtk-greeter --needed --noconfirm
 sudo systemctl enable lightdm
 
@@ -38,7 +38,7 @@ sudo pacman -S ttf-liberation ttf-droid ttf-roboto terminus-font ttf-font-awesom
 sudo pacman -S rxvt-unicode ranger rofi dmenu --needed --noconfirm
 sudo pacman -S pavucontrol-qt playerctl arandr --noconfirm
 yay -Syu volctl --noconfirm
-yay -S bumblebee-status --noconfirm
+yay -S bumblebee-status i3lock-color --noconfirm
 
 # Install software
 sudo pacman -S firefox vlc --needed --noconfirm
