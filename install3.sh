@@ -51,6 +51,14 @@ yay -S teamviewer spotify foxitreader --noconfirm
 yay -S teams onedrivegui-git --noconfirm
 systemctl enable optimus-manager
 
+# Set LightDM keyboard layout
+sudo bash -c "echo 'Section \"InputClass\"' >> /etc/X11/xorg.conf.d/20-keyboard.conf"
+sudo bash -c "echo '    Identifier \"keyboard\"' >> /etc/X11/xorg.conf.d/20-keyboard.conf"
+sudo bash -c "echo '    MatchIsKeyboard \"yes\"' >> /etc/X11/xorg.conf.d/20-keyboard.conf"
+sudo bash -c "echo '    Option \"XkbLayout\" \"de\"' >> /etc/X11/xorg.conf.d/20-keyboard.conf"
+sudo bash -c "echo '    Option \"XkbVariant\" \"nodeadkeys\"' >> /etc/X11/xorg.conf.d/20-keyboard.conf"
+sudo bash -c "echo 'EndSection' >> /etc/X11/xorg.conf.d/20-keyboard.conf"
+
 # Download next script
 curl https://raw.githubusercontent.com/markusplayzz/archinstall/main/install4.sh -o ~/install4.sh
 
