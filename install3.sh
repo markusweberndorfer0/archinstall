@@ -45,6 +45,7 @@ sudo pacman -S firefox vlc --needed
 sudo pacman -S terminator breeze-icons libreoffice
 sudo pacman -S optimus-manager optimus-manager-qt
 sudo pacman -S flameshot code krusader mupdf
+sudo pacman -S evolution evolution-ews
 yay -S p7zip
 yay -S p7zip-gui
 yay -S optimus-manager
