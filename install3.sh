@@ -42,11 +42,15 @@ yay -S bumblebee-status
 
 # Install software
 sudo pacman -S firefox vlc --needed
-sudo pacman -S terminator thunar
+sudo pacman -S terminator breeze-icons libreoffice
 sudo pacman -S optimus-manager optimus-manager-qt
-sudo pacman -S flameshot -S
+sudo pacman -S flameshot code krusader
+yay -S p7zip
+yay -S p7zip-gui
 yay -S optimus-manager
 yay -S optimus-manager-qt
+yay -S teamviewer
+yay -S spotify
 systemctl enable optimus-manager
 
 # Download next script
