@@ -10,8 +10,8 @@
 # w - y
 
 # Get best package mirrors
-pacman -Sy
-pacman -S reflector
+pacman -Sy --noconfirm
+pacman -S reflector --noconfirm
 reflector -c "AT" -f 12 -l 10 -n 12 --save /etc/pacman.d/mirrorlist
 
 # Format disks

@@ -8,7 +8,7 @@ sudo sed -i 's/GRUB_CMDLINE_LINUX_DEFAULT="loglevel=3 quiet"/GRUB_CMDLINE_LINUX_
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 # Configure theme
-sudo pacman -S lxappearance materia-gtk-theme papirus-icon-theme
+sudo pacman -S lxappearance materia-gtk-theme papirus-icon-theme --noconfirm
 sudo sed -i 's/#background=/background=#2f343f/' /etc/lightdm/lightdm-gtk-greeter.conf
 sudo sed -i 's/#theme-name=/theme-name=Materia/' /etc/lightdm/lightdm-gtk-greeter.conf
 sudo sed -i 's/#icon-theme-name=/icon-theme-name=Papirus-Dark/' /etc/lightdm/lightdm-gtk-greeter.conf
@@ -39,7 +39,7 @@ echo "bindsym \$mod+x exec sh /home/markus/.config/i3lock/i3lockconfig" >> ~/.co
 sed -i 's/i3-sensible-terminal/terminator/g' ~/.config/i3/config
 
 # Change dmenu to rofi
-sed -i 's/bindsym $mod+d exec --no-startup-id dmenu/bindsym $mod+d exec --no-startup-id rofi -theme android_notification -show run/' ~/.config/i3/config
+sed -i 's/bindsym $mod+d exec --no-startup-id dmenu_run/bindsym $mod+d exec --no-startup-id rofi -theme android_notification -show run/' ~/.config/i3/config
 
 # Configure audio
 echo "# volctl" >> ~/.config/i3/config
