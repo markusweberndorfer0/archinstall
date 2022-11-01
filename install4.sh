@@ -39,7 +39,7 @@ echo "bindsym \$mod+x exec sh /home/markus/.config/i3lock/i3lockconfig" >> ~/.co
 sed -i 's/i3-sensible-terminal/terminator/g' ~/.config/i3/config
 
 # Change dmenu to rofi
-sed -i 's/bindsym $mod+d exec --no-startup-id dmenu/bindsym $mod+d exec --no-startup-id rofi -theme android_notification -show run/'
+sed -i 's/bindsym $mod+d exec --no-startup-id dmenu/bindsym $mod+d exec --no-startup-id rofi -theme android_notification -show run/' ~/.config/i3/config
 
 # Configure audio
 echo "# volctl" >> ~/.config/i3/config
