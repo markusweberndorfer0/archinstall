@@ -93,7 +93,7 @@ echo "bindsym \$mod+Control+Up move workspace to output up" >> ~/.config/i3/conf
 echo "bindsym \$mod+Control+Down move workspace to output down" >> ~/.config/i3/config
 
 # Set startup gpu profile
-sudo cp cp /usr/share/optimus-manager.conf /etc/optimus-manager/
+sudo cp /usr/share/optimus-manager.conf /etc/optimus-manager/
 sudo sed -i 's/startup_mode=integrated/startup_mode=hybrid/' /etc/optimus-manager/optimus-manager.conf
 sudo sed -i 's/startup_auto_battery_mode=integrated/startup_auto_battery_mode=hybrid/' /etc/optimus-manager/optimus-manager.conf
 sudo sed -i 's/startup_auto_extpower_mode=nvidia/startup_auto_extpower_mode=hybrid/' /etc/optimus-manager/optimus-manager.conf
