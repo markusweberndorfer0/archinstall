@@ -6,8 +6,7 @@
 # o - y
 # n - Enter - Enter - +512M - EF00
 # n - Enter - Enter - +8G - 8200
-# n - Enter - Enter - +50G - 8304
-# n - Enter - Enter - +100G - 8302
+# n - Enter - Enter - Enter - 8300
 # w - y
 
 # Get best package mirrors
@@ -19,15 +18,13 @@ reflector -c "AT" -f 12 -l 10 -n 12 --save /etc/pacman.d/mirrorlist
 mkfs.fat -F32 /dev/nvme0n1p1
 mkswap /dev/nvme0n1p2
 mkfs.ext4 /dev/nvme0n1p3
-mkfs.ext4 /dev/nvme0n1p4
 
 # Mount parts
 
 swapon /dev/nvme0n1p2
 mount /dev/nvme0n1p3 /mnt
-mkdir /mnt/{boot,home}
+mkdir /mnt/boot
 mount /dev/nvme0n1p1 /mnt/boot
-mount /dev/nvme0n1p4 /mnt/home
 
 # Installation
 timedatectl set-ntp true
