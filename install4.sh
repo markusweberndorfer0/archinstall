@@ -97,6 +97,12 @@ echo "exec_always optimus-manager --switch hybrid" >> ~/.config/i3/config
 # echo "# Set second monitor's place" >> ~/.config/i3/config
 # echo "xrandr --output HDMI-1-0 --right-of eDP-1" >> ~/.config/i3/config
 
+# Screenshot config
+echo "# Screenshot config" >> ~/.config/i3/config
+mkdir ~/Pictures/screenshots
+echo "bindsym Print exec flameshot full -p ~/Pictures/screenshots" >> ~/.config/i3/config
+echo "bindsym \$mod+Shift+S exec flameshot gui -p ~/Pictures/screenshots" >> ~/.config/i3/config
+
 # Delete installation scripts
 sudo rm /install2.sh
 rm ~/install3.sh
