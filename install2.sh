@@ -15,12 +15,12 @@ ln -sf /usr/share/zoneinfo/Europe/Vienna /etc/localtime
 hwclock --systohc
 
 # Packages
-pacman -S dhcpcd networkmanager network-manager-applet
+pacman -Syu dhcpcd networkmanager network-manager-applet --noconfirm
 systemctl enable dhcpcd
 systemctl enable NetworkManager
 
 # Install grub
-pacman -S grub-efi-x86_64 efibootmgr
+pacman -S grub-efi-x86_64 efibootmgr --noconfirm
 grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=arch
 grub-mkconfig -o /boot/grub/grub.cfg
 
@@ -31,12 +31,12 @@ echo "::1       localhost.localdomain   localhost" >> /etc/hosts
 echo "127.0.1.1 ArchL.localdomain       ArchL" >> /etc/hosts
 
 # Install other packages
-pacman -S iw wpa_supplicant dialog intel-ucode git reflector lshw unzip htop
-pacman -S wget pulseaudio alsa-utils alsa-plugins pavucontrol xdg-user-dirs
+pacman -S iw wpa_supplicant dialog intel-ucode git reflector lshw unzip htop --noconfirm
+pacman -S wget pulseaudio alsa-utils alsa-plugins pavucontrol xdg-user-dirs --noconfirm
 reflector -c "AT" --latest 5 --sort rate --save /etc/pacman.d/mirrorlist
 
 # Install nvidia drivers
-sudo pacman -S nvidia
+sudo pacman -S nvidia --noconfirm
 # Blacklist "nouveau"
 echo "blacklist nouveau" >> /usr/lib/modprobe.d/nvidia.conf
 

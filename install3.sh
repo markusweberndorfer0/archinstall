@@ -12,11 +12,11 @@ cd ./yay
 makepkg -si
 
 # Manage bluetooth
-sudo pacman -S bluez bluez-utils blueman
+sudo pacman -S bluez bluez-utils blueman --noconfirm
 sudo systemctl enable bluetooth
 
 # Improve battery consumption
-sudo pacman -S tlp tlp-rdw powertop acpi
+sudo pacman -S tlp tlp-rdw powertop acpi --noconfirm
 sudo systemctl enable tlp
 sudo systemctl mask systemd-rfkill.service
 sudo systemctl mask systemd-rfkill.socket
@@ -25,36 +25,30 @@ sudo systemctl mask systemd-rfkill.socket
 sudo systemctl enable fstrim.timer
 
 # Install i3-gaps
-sudo pacman -S xorg-server xorg-apps xorg-xinit
-sudo pacman -S i3-gaps i3blocks i3lock i3status numlockx
-sudo pacman -S lightdm lightdm-gtk-greeter --needed
+sudo pacman -S xorg-server xorg-apps xorg-xinit --noconfirm
+sudo pacman -S i3-gaps i3blocks i3lock i3status numlockx --noconfirm
+sudo pacman -S lightdm lightdm-gtk-greeter --needed --noconfirm
 sudo systemctl enable lightdm
 
 # Install fonts
-sudo pacman -S noto-fonts ttf-ubuntu-font-family ttf-dejavu ttf-freefont
-sudo pacman -S ttf-liberation ttf-droid ttf-roboto terminus-font ttf-font-awesome
+sudo pacman -S noto-fonts ttf-ubuntu-font-family ttf-dejavu ttf-freefont --noconfirm
+sudo pacman -S ttf-liberation ttf-droid ttf-roboto terminus-font ttf-font-awesome --noconfirm
 
 # Install tools
-sudo pacman -S rxvt-unicode ranger rofi dmenu --needed
-sudo pacman -S pavucontrol-qt playerctl arandr
-yay -Syu volctl
-yay -S bumblebee-status
+sudo pacman -S rxvt-unicode ranger rofi dmenu --needed --noconfirm
+sudo pacman -S pavucontrol-qt playerctl arandr --noconfirm
+yay -Syu volctl --noconfirm
+yay -S bumblebee-status --noconfirm
 
 # Install software
-sudo pacman -S firefox vlc --needed
-sudo pacman -S terminator breeze-icons libreoffice
-sudo pacman -S optimus-manager optimus-manager-qt
-sudo pacman -S flameshot code krusader mupdf
-sudo pacman -S evolution evolution-ews
-yay -S p7zip
-yay -S p7zip-gui
-yay -S optimus-manager
-yay -S optimus-manager-qt
-yay -S teamviewer
-yay -S spotify
-yay -S foxitreader
-yay -S teams
-yay -S onedrivegui-git
+sudo pacman -S firefox vlc --needed --noconfirm
+sudo pacman -S terminator breeze-icons libreoffice --noconfirm
+sudo pacman -S flameshot code krusader mupdf --noconfirm
+sudo pacman -S evolution evolution-ews --noconfirm
+yay -S p7zip p7zip-gui --noconfirm
+yay -S optimus-manager optimus-manager-qt --noconfirm
+yay -S teamviewer spotify foxitreader --noconfirm
+yay -S teams onedrivegui-git --noconfirm
 systemctl enable optimus-manager
 
 # Download next script
