@@ -92,9 +92,11 @@ echo "bindsym \$mod+Control+Left move workspace to output left" >> ~/.config/i3/
 echo "bindsym \$mod+Control+Up move workspace to output up" >> ~/.config/i3/config
 echo "bindsym \$mod+Control+Down move workspace to output down" >> ~/.config/i3/config
 
-# Switch gpu profile
-echo "# Switch gpu profile" >> ~/.config/i3/config
-echo "exec_always optimus-manager --switch hybrid" >> ~/.config/i3/config
+# Set startup gpu profile
+sudo cp cp /usr/share/optimus-manager.conf /etc/optimus-manager/
+sudo sed -i 's/startup_mode=integrated/startup_mode=hybrid/' /etc/optimus-manager/optimus-manager.conf
+sudo sed -i 's/startup_auto_battery_mode=integrated/startup_auto_battery_mode=hybrid/' /etc/optimus-manager/optimus-manager.conf
+sudo sed -i 's/startup_auto_extpower_mode=nvidia/startup_auto_extpower_mode=hybrid/' /etc/optimus-manager/optimus-manager.conf
 
 # Place second monitor right
 # echo "# Set second monitor's place" >> ~/.config/i3/config
