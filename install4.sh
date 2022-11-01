@@ -3,10 +3,9 @@
 # Customize packman
 sudo sed -i 's/#Color/Color\nILoveCandy/' /etc/pacman.conf
 
-# Set keyboard layout
-sudo setxkbmap de
-echo "# Set keymap" >> ~/.config/i3/config
-echo "exec_always setxkbmap -layout de" >> ~/.config/i3/config
+# Add params to grub conf
+sudo sed -i 's/GRUB_CMDLINE_LINUX_DEFAULT="loglevel=3 quiet"/GRUB_CMDLINE_LINUX_DEFAULT="loglevel=3 quiet video.use_native_backlight=1 acpi_backlight=video"/' /etc/default/grub
+sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 # Configure theme
 sudo pacman -S lxappearance materia-gtk-theme papirus-icon-theme
@@ -14,6 +13,11 @@ sudo sed -i 's/#background=/background=#2f343f/' /etc/lightdm/lightdm-gtk-greete
 sudo sed -i 's/#theme-name=/theme-name=Materia/' /etc/lightdm/lightdm-gtk-greeter.conf
 sudo sed -i 's/#icon-theme-name=/icon-theme-name=Papirus-Dark/' /etc/lightdm/lightdm-gtk-greeter.conf
 sudo sed -i 's/#font-name=/font-name=Ubuntu 11/' /etc/lightdm/lightdm-gtk-greeter.conf
+
+# Set keyboard layout
+sudo setxkbmap de
+echo "# Set keymap" >> ~/.config/i3/config
+echo "exec_always setxkbmap -layout de" >> ~/.config/i3/config
 
 # Change i3-gaps font-family and size
 sed -i 's/font pango:monospace 8/font pango:Ubuntu 11/' ~/.config/i3/config
