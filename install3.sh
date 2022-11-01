@@ -44,6 +44,7 @@ yay -S bumblebee-status
 sudo pacman -S firefox vlc --needed
 sudo pacman -S terminator thunar
 sudo pacman -S optimus-manager optimus-manager-qt
+sudo pacman -S flameshot -S
 yay -S optimus-manager
 yay -S optimus-manager-qt
 systemctl enable optimus-manager
