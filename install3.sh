@@ -43,7 +43,7 @@ yay -S bumblebee-status --noconfirm
 # Install software
 sudo pacman -S firefox vlc --needed --noconfirm
 sudo pacman -S terminator breeze-icons libreoffice --noconfirm
-sudo pacman -S flameshot code krusader mupdf kdiff3 --noconfirm
+sudo pacman -S flameshot code krusader mupdf kdiff3 thunar --noconfirm
 sudo pacman -S evolution evolution-ews --noconfirm
 yay -S p7zip p7zip-gui --noconfirm
 yay -S optimus-manager optimus-manager-qt --noconfirm
