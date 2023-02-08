@@ -24,6 +24,7 @@ mount /dev/nvme0n1p3 /mnt
 
 # Installation
 timedatectl set-ntp true
+pacman -Sy archlinux-keyring
 pacstrap /mnt base base-devel linux linux-firmware vi vim nano
 genfstab -U /mnt >> /mnt/etc/fstab
 
