@@ -4,8 +4,8 @@
 sudo sed -i 's/#Color/Color\nILoveCandy/' /etc/pacman.conf
 
 # Add params to grub conf
-sudo sed -i 's/GRUB_CMDLINE_LINUX_DEFAULT="loglevel=3 quiet"/GRUB_CMDLINE_LINUX_DEFAULT="loglevel=3 quiet video.use_native_backlight=1 acpi_backlight=video"/' /etc/default/grub
-sudo grub-mkconfig -o /boot/grub/grub.cfg
+# sudo sed -i 's/GRUB_CMDLINE_LINUX_DEFAULT="loglevel=3 quiet"/GRUB_CMDLINE_LINUX_DEFAULT="loglevel=3 quiet video.use_native_backlight=1 acpi_backlight=video"/' /etc/default/grub
+# sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 # Configure theme
 sudo pacman -S lxappearance materia-gtk-theme papirus-icon-theme --noconfirm
@@ -46,8 +46,8 @@ echo "# volctl" >> ~/.config/i3/config
 echo "exec --no-startup-id volctl" >> ~/.config/i3/config
 
 # Configure optimus-manager
-echo "# optimus-manager-qt" >> ~/.config/i3/config
-echo "exec_always optimus-manager-qt" >> ~/.config/i3/config
+# echo "# optimus-manager-qt" >> ~/.config/i3/config
+# echo "exec_always optimus-manager-qt" >> ~/.config/i3/config
 
 # Configure bluetooth
 echo "# blueman-applet" >> ~/.config/i3/config
@@ -55,9 +55,9 @@ echo "exec --no-startup-id blueman-applet" >> ~/.config/i3/config
 
 # Assign screen brightness controls
 # HP Omen: https://forum.manjaro.org/t/no-brightness-control-on-nvidia-hp-omen/95329
-echo "# Screen brightness controls" >> ~/.config/i3/config
-echo "bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 20" >> ~/.config/i3/config
-echo "bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 20" >> ~/.config/i3/config
+# echo "# Screen brightness controls" >> ~/.config/i3/config
+# echo "bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 20" >> ~/.config/i3/config
+# echo "bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 20" >> ~/.config/i3/config
 
 # Assign media player controls
 echo "# Media player controls" >> ~/.config/i3/config
@@ -86,17 +86,17 @@ echo "gaps inner 10" >> ~/.config/i3/config
 echo "gaps outer 5" >> ~/.config/i3/config
 
 # Move workspaces between monitors
-echo "# Move workspaces between monitors" >> ~/.config/i3/config
-echo "bindsym \$mod+Control+Right move workspace to output right" >> ~/.config/i3/config
-echo "bindsym \$mod+Control+Left move workspace to output left" >> ~/.config/i3/config
-echo "bindsym \$mod+Control+Up move workspace to output up" >> ~/.config/i3/config
-echo "bindsym \$mod+Control+Down move workspace to output down" >> ~/.config/i3/config
+# echo "# Move workspaces between monitors" >> ~/.config/i3/config
+# echo "bindsym \$mod+Control+Right move workspace to output right" >> ~/.config/i3/config
+# echo "bindsym \$mod+Control+Left move workspace to output left" >> ~/.config/i3/config
+# echo "bindsym \$mod+Control+Up move workspace to output up" >> ~/.config/i3/config
+# echo "bindsym \$mod+Control+Down move workspace to output down" >> ~/.config/i3/config
 
 # Set startup gpu profile
-sudo cp /usr/share/optimus-manager.conf /etc/optimus-manager/
-sudo sed -i 's/startup_mode=integrated/startup_mode=hybrid/' /etc/optimus-manager/optimus-manager.conf
-sudo sed -i 's/startup_auto_battery_mode=integrated/startup_auto_battery_mode=hybrid/' /etc/optimus-manager/optimus-manager.conf
-sudo sed -i 's/startup_auto_extpower_mode=nvidia/startup_auto_extpower_mode=hybrid/' /etc/optimus-manager/optimus-manager.conf
+# sudo cp /usr/share/optimus-manager.conf /etc/optimus-manager/
+# sudo sed -i 's/startup_mode=integrated/startup_mode=hybrid/' /etc/optimus-manager/optimus-manager.conf
+# sudo sed -i 's/startup_auto_battery_mode=integrated/startup_auto_battery_mode=hybrid/' /etc/optimus-manager/optimus-manager.conf
+# sudo sed -i 's/startup_auto_extpower_mode=nvidia/startup_auto_extpower_mode=hybrid/' /etc/optimus-manager/optimus-manager.conf
 
 # Place second monitor right
 # echo "# Set second monitor's place" >> ~/.config/i3/config

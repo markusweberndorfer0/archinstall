@@ -46,10 +46,10 @@ sudo pacman -S terminator breeze-icons libreoffice --noconfirm
 sudo pacman -S flameshot code krusader mupdf kdiff3 thunar --noconfirm
 sudo pacman -S evolution evolution-ews --noconfirm
 yay -S p7zip p7zip-gui --noconfirm
-yay -S optimus-manager optimus-manager-qt --noconfirm
+# yay -S optimus-manager optimus-manager-qt --noconfirm
 yay -S teamviewer spotify foxitreader --noconfirm
 yay -S teams onedrivegui-git --noconfirm
-systemctl enable optimus-manager
+# systemctl enable optimus-manager
 
 # Set LightDM keyboard layout
 sudo bash -c "echo 'Section \"InputClass\"' >> /etc/X11/xorg.conf.d/20-keyboard.conf"

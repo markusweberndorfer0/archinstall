@@ -36,9 +36,9 @@ pacman -S wget pulseaudio alsa-utils alsa-plugins pavucontrol xdg-user-dirs --no
 reflector -c "AT" --latest 5 --sort rate --save /etc/pacman.d/mirrorlist
 
 # Install nvidia drivers
-sudo pacman -S nvidia --noconfirm
+#sudo pacman -S nvidia --noconfirm
 # Blacklist "nouveau"
-echo "blacklist nouveau" >> /usr/lib/modprobe.d/nvidia.conf
+#echo "blacklist nouveau" >> /usr/lib/modprobe.d/nvidia.conf
 
 # Set new root passwd
 echo Set new root passwd!
