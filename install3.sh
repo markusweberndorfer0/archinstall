@@ -25,11 +25,10 @@ sudo systemctl mask systemd-rfkill.socket
 sudo systemctl enable fstrim.timer
 
 # Install i3-gaps
-sudo pacman -S xorg xorg-server xorg-apps xorg-xinit --noconfirm
-sudo pacman -S gnome numlockx --noconfirm
-sudo systemctl start gdm.service
-sudo systemctl enable gdm.service
-sudo pacman -S gnome-extra gnome-tweaks --noconfirm
+sudo pacman -S xorg-server xorg-apps xorg-xinit --noconfirm
+sudo pacman -S i3-gaps i3blocks i3status numlockx --noconfirm
+sudo pacman -S lightdm lightdm-gtk-greeter --needed --noconfirm
+sudo systemctl enable lightdm
 
 # Install fonts
 sudo pacman -S noto-fonts ttf-ubuntu-font-family ttf-dejavu ttf-freefont --noconfirm
