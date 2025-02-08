@@ -24,6 +24,7 @@ pacman -S grub-efi-x86_64 efibootmgr os-prober grub dosfstools mtools --noconfir
 echo "GRUB_DISABLE_OS_PROBER=false" >> /etc/default/grub
 grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=arch
 grub-mkconfig -o /boot/grub/grub.cfg
+pacman -S amd-ucode --noconfirm
 
 # Set hostname and edit hosts file
 echo ArchL > /etc/hostname
