@@ -28,7 +28,7 @@ mount /dev/nvme0n1p1 /mnt/boot
 
 # Installation
 timedatectl set-ntp true
-pacstrap /mnt base base-devel linux linux-firmware vi vim nano git amd-ucode
+pacstrap /mnt base base-devel linux linux-firmware vi vim nano git
 genfstab -U /mnt >> /mnt/etc/fstab
 
 # Get next script
